@@ -1,0 +1,67 @@
+\documentclass[sigchi, review]{acmart}
+
+\setcopyright{licensedcagov}
+
+\copyrightyear{2019}
+\acmYear{2019}
+%\setcopyright{acmlicensed}
+\acmConference[CHI 2019] {CHI Conference on Human Factors in Computing Systems Proceedings}{May 4--9, 2019}{Glasgow, Scotland UK}
+% Note UK should be in caps
+\acmBooktitle{CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4--9, 2019, Glasgow, Scotland UK}
+\acmPrice{15.00}
+\acmISBN{978-1-4503-5970-2/19/05}
+\acmDOI{10.1145/XXXXXX.XXXXXX}
+% Authors, replace the red X's with your assigned DOI string during the rights review eform process.
+
+\newcommand{\ruzica}[1]{{\color{red}\textbf{Ruzica: } #1}}
+\newcommand{\markS}[1]{{\color{green}\textbf{Mark: } #1}}
+\newcommand{\bill}[1]{{\color{blue}\textbf{Bill: } #1}}
+
+\begin{document}
+\title[]{Live Programming By Example} 
+
+\author{William T. Hallahan}
+%\authornote{with author1 note}          %% \authornote is optional;
+                                        %% can be repeated if necessary
+%\orcid{nnnn-nnnn-nnnn-nnnn}             %% \orcid is optional
+\affiliation{
+  %\position{Position1}
+  \department{Computer Science}              %% \department is recommended
+  \institution{Yale University}            %% \institution is required
+  }
+\email{william.hallahan@yale.edu}          %% \email is recommended
+
+%% Author with single affiliation.
+\author{Mark Santolucito}
+%\authornote{with author1 note}          %% \authornote is optional;
+                                        %% can be repeated if necessary
+%\orcid{nnnn-nnnn-nnnn-nnnn}             %% \orcid is optional
+\affiliation{
+  %\position{Position1}
+  \department{Computer Science}              %% \department is recommended
+  \institution{Yale University}            %% \institution is required
+  }
+\email{mark.santolucito@yale.edu}          %% \email is recommended
+
+%% Author with single affiliation.
+\author{Ruzica Piskac}
+%\authornote{with author1 note}          %% \authornote is optional;
+                                        %% can be repeated if necessary
+%\orcid{nnnn-nnnn-nnnn-nnnn}             %% \orcid is optional
+\affiliation{
+  %\position{Position1}
+  \department{Computer Science}              %% \department is recommended
+  \institution{Yale University}            %% \institution is required
+  }
+\email{ruzica.piskac@yale.edu}          %% \email is recommended
+
+\maketitle
+
+\input{intro}
+\input{related}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sources}
+
+
+\end{document}

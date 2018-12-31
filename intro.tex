@@ -1,0 +1,50 @@
+\section{Synthesis in Live Programming}
+\label{sec:intro}
+
+
+Traditionally, writing a program is a relatively static process: a programmer writes some code and, after a successful compilation, can observe and inspect its behavior. If the code does not actually implement the programmer's intentions, she can correct the program and repeat the process.
+
+The live programming paradigm advocates a more dynamic programming cycle that allows the programmer to inspect and understand the code as it is written. As code is written, a user interface gives realtime feedback.  While existing incarnations of live programming environments mainly focus on programs with graphical output, we have developed a general-purpose live programming framework for Javascript.
+This framework both provides programmers with realtime feedback, via input/output pairs, and automated repair based on the programming by example paradigm. 
+
+Programming by example (PBE)~\cite{cypher93,lieberman01,synasc12} is a synthesis technique that automatically generates programs that coincide with given examples. An example is specified as a tuple of input and output values. Given a set $S= \{(i_1, o_1),\ldots, (i_n, o_n)\}$ of input/output examples, the goal is to automatically derive a program $P$ such that for every $j$, $P(i_j) = o_i$. The success and impact of this line of work can be estimated from the fact that some of this technology ships as part of the popular Flash Fill feature in Excel 2013~\cite{flashFillPOPL}.
+
+Instead of writing code, the user provides a list of relevant examples and the synthesis tool automatically generates a program. In this way, the examples can be seen as an easily readable and understandable specification. However, even if the synthesized program satisfies all the provided examples, it still might not correspond to the user's intentions. Examples are, by nature, an incomplete specification. We believe that a live programming environment is an ideal framework to address this issue. Since the program continuously interacts with the programming environment, the user can provide new examples that better illustrate their intentions, and a synthesized program can be refined with each new example. We call this approach {\emph{cooperative programming}}.
+
+Our framework incorporates programming by example technology with
+JavaScript.
+Users of the framework provide sample inputs,
+and the outputs are shown in realtime
+as they write and modify functions.
+
+By observing changes in the input-output pairs,
+the user receives immediate feedback about whether the code is correct without actually analyzing it in detail.
+Any example that behaves unexpectedly acts as a real-time indication of an error in the code. 
+
+When the user encounters unexpected feedback, they have two optons.
+The user can go back to the code, detect
+the source of the error, and correct it manually.
+However, they can also adjust that output value directly,
+and rely on repair by example to ensure the program gives the expected output.
+% A live programming environment is obtained through a standard
+% Haskell REPL (Read Evaluate Print Loop) paradigm. 
+
+% \noindent\fbox{%
+%     \parbox{\textwidth}{%
+% A small demo of our envisioned approach is available in the following video \\
+% $\qquad$\url{https://www.youtube.com/watch?v=w5aI3N4dq2w}.    }%
+% }
+
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[scale=0.5]{tool}
+% \caption{A user interface for a live programming environment.}
+% \label{fig:tool}
+% \end{figure}
+
+
+% The next question is how to correct the error? The user can go back to the code, detect
+% the source of the error and correct it manually. We, additionally, want to offer an 
+% automated repair by integrating recent advances in the PBE paradigm into this framework.
+% If the user notices that the current program for an input value $i$ returns an incorrect value $o$, then she can adjust that value to specify that her intended program should return $o'$ instead.
+% This feedback could allow a tool to automatically synthesize a program which coincides with all given examples (included the modified ones) and which follows the structure of the original code as closely as possible.
