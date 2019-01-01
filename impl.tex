@@ -1,7 +1,20 @@
 \section{Implementation}
-We have implemented our live programming methodology as a plugin for the Atom text editor~\cite{Atom}.
+We have implemented our live programming methodology as a plugin
+for Javascript programming in the Atom text editor~\cite{Atom}.
+While a programmer writes code in the main panel,
+live debugging information is shown in a side panel.
+By manipulating the output value,
+the programmer can make use of programming by example.
 
-\subsection{Synthesis}
+\subsection{Live Debugging}
+As users write code, we continually run the code on the given inputs.
+As Javascript is an interpreted language, this is straightforward.
+Unfortunately, the process of editting code often involves that code
+being in a malformed, syntatically invalid state.
+Thus, we only update the displayed output when the code is, in fact,
+syntatically vaild.~\bill{Is this actually the behavior?}
+
+\subsection{Programming by Example}
 When a user modifies an examples output, we update the code to reflect the change.
 To synthesize code, we make use of CVC4's Syntax-guided synthesis (or SyGuS) algorithm~\cite{reynolds2017sygus}.
 SyGuS is an approach that performs an enumerative search over the space of possible programs,
