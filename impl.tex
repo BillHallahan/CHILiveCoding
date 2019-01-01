@@ -1,0 +1,12 @@
+\section{Implementation}
+We have implemented our live programming methodology as a plugin for the Atom text editor~\cite{Atom}.
+
+\subsection{Synthesis}
+When a user modifies an examples output, we update the code to reflect the change.
+To synthesize code, we make use of CVC4's Syntax-guided synthesis (or SyGuS) algorithm~\cite{reynolds2017sygus}.
+SyGuS is an approach that performs an enumerative search over the space of possible programs,
+based on a given grammar.
+We draw possible grammatical elements from the existing function implementation.
+This both helps ensure that the newly generated code does not stray too far from the programmers original implementation,
+and helps constraint the space CVC4 has to search over.
+If we fail to find a solution to the SyGus problem, we iteratively increase the size of the grammar~\bill{Mark, more about how this is done?}.
