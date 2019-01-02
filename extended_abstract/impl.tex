@@ -13,6 +13,9 @@ Unfortunately, the process of editting code often involves that code
 being in a malformed, syntatically invalid state.
 Thus, we only update the displayed output when the code is, in fact,
 syntatically vaild.~\bill{Is this actually the behavior?}
+When the user closes the file or editor,
+we write the examples to a metadata file.
+We reload the examples when the file is opened again.
 
 \subsection{Programming by Example}
 When a user modifies an examples output, we update the code to reflect the change.
