@@ -20,19 +20,11 @@
 \newcommand{\markS}[1]{{\color{green}\textbf{Mark: } #1}}
 \newcommand{\bill}[1]{{\color{blue}\textbf{Bill: } #1}}
 
+\settopmatter{printacmref=false}
+
 \begin{document}
 \title[]{Live Programming By Example} 
 
-\author{William T. Hallahan}
-%\authornote{with author1 note}          %% \authornote is optional;
-                                        %% can be repeated if necessary
-%\orcid{nnnn-nnnn-nnnn-nnnn}             %% \orcid is optional
-\affiliation{
-  %\position{Position1}
-  \department{Computer Science}              %% \department is recommended
-  \institution{Yale University}            %% \institution is required
-  }
-\email{william.hallahan@yale.edu}          %% \email is recommended
 
 %% Author with single affiliation.
 \author{Mark Santolucito}
@@ -45,6 +37,17 @@
   \institution{Yale University}            %% \institution is required
   }
 \email{mark.santolucito@yale.edu}          %% \email is recommended
+
+\author{William T. Hallahan}
+%\authornote{with author1 note}          %% \authornote is optional;
+                                        %% can be repeated if necessary
+%\orcid{nnnn-nnnn-nnnn-nnnn}             %% \orcid is optional
+\affiliation{
+  %\position{Position1}
+  \department{Computer Science}              %% \department is recommended
+  \institution{Yale University}            %% \institution is required
+  }
+\email{william.hallahan@yale.edu}          %% \email is recommended
 
 \author{Jack Huang}
 %\authornote{with author1 note}          %% \authornote is optional;
@@ -92,6 +95,7 @@ We propose using live programming to help novice programmers better understand e
 
 
 \input{intro}
+\input{impl}
 \input{related}
 
 \bibliographystyle{ACM-Reference-Format}
