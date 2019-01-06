@@ -63,11 +63,6 @@ This both helps ensure that the newly generated code does not stray too far from
 and helps constraint the space CVC4 has to search over.
 If we fail to find a solution to the SyGus problem, we iteratively increase the size of the grammar~\bill{Mark, more about how this is done?}.
 
-\subsection{Overall design}
-\bill{This seems like an important point to make somewhere, but I'm not sure this is the best place?}
-Live debugging and programming by example naturally complement each other.
-Programming by example makes use of examples as an easily readable and understandable specification. However, even if the synthesized program satisfies all the provided examples, it still might not correspond to the user's intentions. Examples are, by nature, an incomplete specification. However, since live debugging allows a programmer to immediately and continuously see the effects of changes, the user can provide new examples that better illustrate their intentions when synthesis fails. The synthesized program can then be refined with each new example. We call this approach {\emph{cooperative programming}}.
-
 \subsection{Implementation}
 We have implemented our live programming methodology as a plugin
 for Javascript programming in the Atom text editor~\cite{Atom}.
