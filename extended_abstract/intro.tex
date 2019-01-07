@@ -51,8 +51,8 @@ Of course, the programmer must be careful that desired existing behavior is pres
 but this can be done by comparing the old and new code,
 rather than having to write new code manually.
 
-Finally, live debugging and programming by example naturally complement each other.
-Programming by example makes use of examples as an easily readable and understandable specification. However, even if the synthesized program satisfies all the provided examples, it still might not correspond to the user's intentions. Examples are, by nature, an incomplete specification. However, since live debugging allows a programmer to immediately and continuously see the effects of changes, the user can provide new examples that better illustrate their intentions when synthesis fails. The synthesized program is then refined with each new example. We call this approach {\emph{cooperative programming}}.
+Finally, live debugging and PBE naturally complement each other.
+PBE makes use of examples as an easily readable and understandable specification. However, even if the synthesized program satisfies all the provided examples, it still might not correspond to the user's intentions. Examples are, by nature, an incomplete specification. However, since live debugging allows a programmer to immediately and continuously see the effects of changes, the user can provide new examples that better illustrate their intentions when synthesis fails. The synthesized program is then refined with each new example. We call this approach {\emph{cooperative programming}}.
 
 As an implementation, we developed a Javascript live coding plugin for the Atom text editor~\cite{Atom}.
 
