@@ -4,11 +4,12 @@
 
 Traditionally, writing a program is a relatively static process: a programmer writes some code and, after a successful compilation, can observe and inspect its behavior. If the code does not actually implement the programmer's intentions, they can correct the program and repeat the process.
 
-The live programming paradigm advocates a more dynamic programming cycle that allows the programmer to inspect and understand the code as it is written. As code is written, a user interface gives realtime feedback.  While existing incarnations of live programming environments~\cite{victor2012, chugh2016programmatic, brown2009interacting} mainly focus on programs with graphical or auditory output, we have developed a methodology for general-purpose live programming.
+The live programming paradigm advocates a more dynamic programming cycle that allows the programmer to inspect and understand the code as it is written. As code is written, the user interface gives realtime feedback.  While existing incarnations of live programming environments~\cite{victor2012, chugh2016programmatic, brown2009interacting} mainly focus on programs with graphical or auditory output, we have developed a methodology for general-purpose live programming.
 We seek to both give programmers immediate feedback as they write code,
 and to allow them to avoid manually writing code altogether.
 We accomplish both of these goals through input/output examples.
-We introduce \textit{live debugging}, which shows realtime feedback via changing outputs to fixed inputs as a function is modified. We also make use of \textit{programming by example} (PBE), which offers automated repairs based on input/output examples.
+We use \textit{live debugging} to show realtime feedback via changing outputs to fixed inputs as a function is modified. 
+We also leverage recent advances in \textit{programming by example} (PBE) to offer automated repairs based on input/output examples.
 
 Live debugging and programming by example naturally complement each other.
 Programming by example makes use of examples as an easily readable and understandable specification. However, even if the synthesized program satisfies all the provided examples, it still might not correspond to the user's intentions. Examples are, by nature, an incomplete specification. However, since live debugging allows a programmer to immediately and continuously see the effects of changes, the user can provide new examples that better illustrate their intentions when synthesis fails. The synthesized program can then be refined with each new example. We call this approach {\emph{cooperative programming}}.
