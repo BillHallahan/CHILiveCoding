@@ -1,26 +1,3 @@
-\begin{marginfigure}
-	\setlength{\abovecaptionskip}{0.1pt plus 0.1pt minus 0.1pt}
-	\includegraphics[width=0.55\textwidth]{figures/initial_greet}
-	\caption{Code is written in the left hand panel,
-	while examples are shown in the right hand panel.}
-	\label{fig:init}
-\end{marginfigure}
-\begin{marginfigure}
-	\setlength{\abovecaptionskip}{0.1pt plus 0.1pt minus 0.1pt}
-	\includegraphics[width=0.55\textwidth]{figures/manual_change}
-	\caption{When the code is modified, the examples update in real time.
-	Here, the user has added a space to the output, by editing the code.}
-	\label{fig:man_change}
-\end{marginfigure}
-\begin{marginfigure}
-	\setlength{\abovecaptionskip}{0.1pt plus 0.1pt minus 0.1pt}
-	\includegraphics[width=0.55\textwidth]{figures/pbe_before}
-	\includegraphics[width=0.55\textwidth]{figures/pbe_after}
-	\caption{The user can also modify the output examples, to repair the code.  Here, the
-	user has added a exclamation point to the end of the example's output, resulting in new code that appends an exclamation point.}
-	\label{fig:pbe}
-\end{marginfigure}
-
 \section{Live Coding Plugin}
 % We have implemented our live programming methodology as a plugin
 % for Javascript programming in the Atom text editor~\cite{Atom}.
@@ -58,10 +35,10 @@ When a user modifies an examples output, we update the code to reflect the chang
 To synthesize code, we make use of CVC4's Syntax-guided synthesis (or SyGuS) algorithm~\cite{reynolds2017sygus}.
 SyGuS is an approach that performs an enumerative search over the space of possible programs,
 based on a given grammar.
-We draw possible grammatical elements from the existing function implementation.
+We draw possible grammatical elements from the existing function implementation and the provided examples.
 This both helps ensure that the newly generated code does not stray too far from the programmers original implementation,
 and helps constraint the space CVC4 has to search over.
-If we fail to find a solution to the SyGus problem, we iteratively increase the size of the grammar~\bill{Mark, more about how this is done?}.
+If we fail to find a solution to the SyGus problem, we can iteratively increase the size of the grammar to include elements not present the user-provided code.
 
 \subsection{Implementation}
 We have implemented our live programming methodology as a plugin
