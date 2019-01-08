@@ -28,7 +28,7 @@ we write the examples to a metadata file.
 We reload the examples when the file is opened again.
 
 \subsection{Programming by Example}
-Our framework also allows for \textit{programming by example}~\cite{cypher93,lieberman01,synasc12}.
+Our framework also allows for \textit{programming by example}~\cite{cypher1991eager,cypher93,lieberman01,synasc12}.
 PBE  is a synthesis technique that automatically generates programs that coincide with given input/output examples. An example is specified as a tuple of input and output values. Given a set $S= \{(i_1, o_1),\ldots, (i_n, o_n)\}$ of input/output examples, the goal is to automatically derive a program $P$ such that for every $j$, $P(i_j) = o_i$. The success and impact of this line of work can be seen from the fact that some of this technology ships as part of the popular Flash Fill feature in Excel 2013~\cite{flashFillPOPL}.
 
 When a user modifies an examples output, we update the code to reflect the change.
