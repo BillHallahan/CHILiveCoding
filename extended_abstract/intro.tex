@@ -36,18 +36,18 @@ leaving the best resource for developers as the code itself~\cite{latoza2006main
 In fact, it is estimated that half of a programmers time
 is spent just \textit{comprehending} previously written code~\cite{corbi1989program}.
 
-The live programming paradigm advocates a more dynamic programming cycle that allows the programmer to inspect and understand the code as it is written. As code is written, the user interface gives real-time feedback.  While existing live programming environments~\cite{victor2012, chugh2016programmatic, brown2009interacting} focus on programs with graphical or auditory output, we focus on general-purpose live programming.
+The live programming paradigm advocates a more dynamic programming cycle that allows the programmer to inspect and understand the code as it is written. The user interface plays the main role in the live programming paradigm: it updates in real time, to give the programmer immediate feedback.  While existing live programming environments~\cite{victor2012, chugh2016programmatic, brown2009interacting} focus on programs with graphical or auditory output, we focus on general-purpose live programming.
 
 We seek to give programmers immediate feedback as they write code,
 an understanding of code that was written in the past, 
 and a way to avoid manually writing code altogether.
-We accomplish these goals through input/output examples.
-We use \textit{live debugging} to show realtime feedback via changing outputs to fixed inputs as a function is modified.
+We accomplish these goals through representative examples that illustrate the codes behavior.
+Function execution is shown for fixed inputs: the output changes in realtime as a programmer modifies the code.
 We also leverage recent advances in \textit{programming by example} (PBE) to offer automated repairs based on input/output examples.
 Programming by example can be a useful technique for novice programmers, for example in a classroom setting~\cite{Suzuki2017}.
 
-Both live debugging and PBE are also beneficial when \textit{later} modifying the code.
-As opposed to traditional documentation, the live debugging examples update automatically, and thus will never fall out of date.
+Both observing the examples and using PBE are beneficial when \textit{later} modifying the code.
+As opposed to traditional documentation, the examples update automatically, and thus will never fall out of date.
 PBE simplifies modifying legacy code, by allowing programmers to simply demonstrate new behavior.
 Of course, the programmer must be careful to preserve desired existing behavior,
 but this can be done by comparing the old and new code,

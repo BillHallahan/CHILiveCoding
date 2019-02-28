@@ -6,7 +6,7 @@ As shown in Figures~\ref{fig:init} to~\ref{fig:pbe}, our live programming method
 relies on two panels.
 Programmers write code in one panel.
 The other panel displays input/output examples,
-which are used for both live debugging,
+which are used for both manual debugging,
 and programming by example.
 % The other panel displays input/output pairs for each function,
 % which update in real time.
@@ -16,7 +16,7 @@ and programming by example.
 % \subsection{Live Debugging}
 We introduce \textit{live debugging} as a technique to show realtime feedback as programmers write code.
 Programmers can specify an arbitrary number of function inputs.
-As users write code, we continually run the code on the given inputs.By observing changes in the input-output pairs,
+As users write code, we continually run the code on the given inputs. By observing changes in the input-output pairs,
 the user receives immediate feedback about whether the code is correct without actually analyzing it in detail.
 
 As Javascript is an interpreted language, running syntactically correct code is fairly straightforward.
@@ -45,8 +45,6 @@ If we fail to find a solution to the SyGus problem, we can iteratively increase 
 We have implemented our live programming methodology as a plugin
 for Javascript programming in the Atom text editor~\cite{Atom}.
 To demonstrate the key ideas, our implementation supports live debugging for programs manipulating strings.
-We are in the process of extending this support to other datatypes,
-and we see no significant theoretical obstacles to doing so.
 
 There have been many systems from the program synthesis community that build custom editors for live programming~\cite{Mayer} or support synthesis for domain-specific languages invented by the researchers~\cite{omar2018live}.
 A key contribution in our implementation is embedding live programming by example into a language (Javascript) and an editor (Atom) that has a large userbase.
